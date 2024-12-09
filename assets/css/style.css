@@ -202,6 +202,7 @@ a {
 }
 .club-full-list.grid-view-on .team-name {
   margin-bottom: 20px;
+  margin-top: 0px;
 }
 .club-full-list.grid-view-on .each-club-list .manager img {
   width: 30px;
@@ -354,7 +355,7 @@ a {
   justify-content: space-between;
 }
 .stroke-only {
-  font-size: 14.688rem;
+  font-size: 12rem;
   color: #fff;
   -webkit-text-stroke: 3px #2e5aea;
   /* text-shadow: 1px 1px #2e5aea, -1px -1px #2e5aea, 1px -1px #2e5aea, -1px 1px #2e5aea; */
@@ -362,11 +363,11 @@ a {
   font-family: "Teko", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
-  line-height: 10rem;
+  line-height: 8rem;
 }
 .player-name {
   font-family: "Sportypo", sans-serif;
-  font-size: 3rem;
+  font-size: 1.75rem;
   line-height: 3rem;
   font-weight: 500;
   color: #0a1429;
@@ -397,10 +398,12 @@ a {
   color: #fff;
   padding: 0.5rem;
 }
+.player-profession {
+  max-width: 500px;
+}
 .player-profession-body {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  max-width: 500px;
   /* background-color: #F2F2F2; */
   background-color: #e5e5e5;
   padding: 2rem 1.5rem;
@@ -451,6 +454,7 @@ a {
 
 .auction-single-buttons button:hover {
   background-color: #fdce338b;
+  cursor: not-allowed;
 }
 
 .single-player-image .sp-image {
@@ -545,7 +549,7 @@ a {
 
 .auction-single {
   margin-top: -75px;
-  padding-bottom: 80px !important;
+  /* padding-bottom: 80px !important; */
 }
 .multiple-icon img {
   border: 1px solid #fff;
@@ -553,7 +557,10 @@ a {
 .multiple-icon img:nth-child(1) {
   margin-left: 0;
 }
-
+.club-listing .team-name {
+  margin-top: 0px;
+  text-align: left;
+}
 .multiple-icon img:nth-child(2) {
   margin-left: -15px;
 }
@@ -565,11 +572,11 @@ a {
 }
 
 @media (max-width: 1500px) {
-  .stroke-only{
-    font-size: 13rem;
+  .stroke-only {
+    font-size: 10rem;
     line-height: 8rem;
   }
-  .player-name{
+  .player-name {
     font-size: 2rem;
   }
 }
@@ -582,18 +589,18 @@ a {
     line-height: 20px;
   }
 
-  .stroke-only{
+  .stroke-only {
     font-size: 10rem;
-    line-height: 8rem;
+    line-height: 6rem;
   }
-  .player-name{
+  .player-name {
     font-size: 1.5rem;
   }
 
-  .single-player-image .sp-image{
+  .single-player-image .sp-image {
     max-width: 300px;
   }
-  .player-profession-body{
+  .player-profession {
     max-width: 400px;
   }
 
@@ -631,19 +638,19 @@ a {
   .auction-single > div:nth-child(3) {
     width: 100%;
   }
-  .auction-single > div:nth-child(3) .player-profession-body {
+  .auction-single > div:nth-child(3) .player-profession {
     max-width: 100%;
   }
 
   .auction-single {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5rem;
+    gap: 2rem;
   }
   .auction-single > div:nth-child(3) {
     width: 100%;
   }
-  .auction-single > div:nth-child(3) .player-profession-body {
+  .auction-single > div:nth-child(3) .player-profession {
     max-width: 100%;
   }
 }
@@ -663,9 +670,15 @@ a {
     font-size: 18px;
     line-height: 25px;
   }
-
+  .league-name-logo {
+    background-color: transparent;
+  }
   .auction-single {
-    margin-top: 75px;
+    margin-top: 25px;
+  }
+
+  .single-header {
+    height: 190px;
   }
 }
 
@@ -675,6 +688,12 @@ a {
   }
   .list-view ul li {
     font-size: 0px;
+  }
+}
+@media (max-width: 575px) {
+  .balance-point .list-view {
+    margin-top: 20px;
+    width: fit-content;
   }
 }
 
